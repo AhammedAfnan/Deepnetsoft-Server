@@ -1,5 +1,5 @@
 import type {Request, Response} from "express"
-import Category from "../models/category.model"
+import Category from "../models/category.model.js"
 
 export async function createCategoryHandler(req: Request, res: Response) {
     const {name, description} = req.body
