@@ -11,7 +11,7 @@ const app = express();
 
 app.use(express.json())
   .use(cors({
-    origin: 'http://localhost:3000'
+    origin: getEnv('WEB_URL')
   }));
 
 app.use('/api/categories', categoryRouter)

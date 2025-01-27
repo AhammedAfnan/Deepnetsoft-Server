@@ -1,6 +1,7 @@
 export type Enviorment = {
     PORT: string
     MONGO_URI: string
+    WEB_URL : string
 }
 
 export function getEnv<Key extends keyof Enviorment>(key: Key, fallback?: Enviorment[Key]): Enviorment[Key] {
