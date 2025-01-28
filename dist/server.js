@@ -1,14 +1,14 @@
 import "dotenv/config";
 import express from "express";
-import { connectDatabase } from "./config/db";
-import { getEnv } from "./env";
+import { connectDatabase } from "./config/db.js";
+import { getEnv } from "./env.js";
 import cors from "cors";
-import categoryRouter from "./routes/category.router";
-import menuRouter from "./routes/menu.router";
+import categoryRouter from "./routes/category.router.js";
+import menuRouter from "./routes/menu.router.js";
 const app = express();
 app.use(express.json())
     .use(cors({
-    origin: 'http://localhost:3000'
+    origin: getEnv('WEB_URL')
 }));
 app.use('/api/categories', categoryRouter);
 app.use('/api/menus', menuRouter);

@@ -1,4 +1,4 @@
-import Category from "../models/category.model";
+import Category from "../models/category.model.js";
 export async function createCategoryHandler(req, res) {
     const { name, description } = req.body;
     try {

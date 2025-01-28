@@ -1,4 +1,4 @@
-import Menu from "../models/menu.model";
+import Menu from "../models/menu.model.js";
 export async function createMenuHandler(req, res) {
     const menus = req.body;
     try {
